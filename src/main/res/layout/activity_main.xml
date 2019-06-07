@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circket"
+    android:orientation="vertical"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.android.cricketscorekeeper.MainActivity">
+        <LinearLayout
+            android:id="@+id/linear_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_layout"
+                android:backgroundTint="#00B8D4"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                tools:context="com.example.android.courtcounter.MainActivity">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="Team A" />
+                <TextView
+                    android:id="@+id/team_a_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="0/0"
+                    android:textSize="48sp" />
+                <TextView
+                    android:id="@+id/a_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Extra: 0"
+                    android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/a_overs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:text="Overs: 0"
+                    android:textSize="30sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_layout"
+                android:backgroundTint="#FF6D00"
+                android:elevation="8dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="Team B" />
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="0/0"
+                    android:textSize="48sp" />
+
+                <TextView
+                    android:id="@+id/b_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Extra: 0"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/b_overs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:text="Overs: 0"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_score_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_root"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="8dp"
+                android:onClick="zeroRuns"
+                android:stateListAnimator="@null"
+                android:text="0"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="8dp"
+                android:onClick="oneRuns"
+                android:stateListAnimator="@null"
+                android:text="1"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="8dp"
+                android:onClick="twoRuns"
+                android:stateListAnimator="@null"
+                android:text="2"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="8dp"
+                android:onClick="threeRuns"
+                android:stateListAnimator="@null"
+                android:text="3"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#64DD17"
+                android:elevation="8dp"
+                android:onClick="fourRuns"
+                android:stateListAnimator="@null"
+                android:text="4"
+                android:translationZ="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_wicket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_score_root"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:elevation="8dp"
+                android:onClick="fiveRuns"
+                android:stateListAnimator="@null"
+                android:text="5"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#64DD17"
+                android:elevation="8dp"
+                android:onClick="sixRuns"
+                android:stateListAnimator="@null"
+                android:text="6"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#64DD17"
+                android:elevation="8dp"
+                android:onClick="wide"
+                android:stateListAnimator="@null"
+                android:text="WD"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#64DD17"
+                android:elevation="8dp"
+                android:onClick="noball"
+                android:stateListAnimator="@null"
+                android:text="NO"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF3D00"
+                android:elevation="8dp"
+                android:onClick="wicket"
+                android:stateListAnimator="@null"
+                android:text="WKT"
+                android:translationZ="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_option_bat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_wicket"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/my_layout"
+            android:backgroundTint="#FF9800"
+            android:elevation="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:text="Select Batting First Team"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_toss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_option_bat"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00B8D4"
+                android:elevation="8dp"
+                android:onClick="team_a_toss"
+                android:stateListAnimator="@null"
+                android:text="Team A"
+                android:translationZ="8dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#FF6D00"
+                android:elevation="8dp"
+                android:onClick="team_b_toss"
+                android:stateListAnimator="@null"
+                android:text="Team B"
+                android:translationZ="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_toss"
+            android:layout_margin="8dp"
+            android:background="@drawable/my_layout"
+            android:backgroundTint="#FF9800"
+            android:elevation="8dp"
+            android:padding="16dp"
+            android:text="Status: "
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_status"
+            android:layout_centerHorizontal="true"
+            android:elevation="8dp"
+            android:onClick="reset"
+            android:stateListAnimator="@null"
+            android:text="RESET"
+            android:translationZ="8dp" />
+    </RelativeLayout>
+</ScrollView>
